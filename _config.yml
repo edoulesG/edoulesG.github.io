@@ -28,4 +28,4 @@ author:              'martube'
 #feed:
 #  path: rss-feed.xml
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
