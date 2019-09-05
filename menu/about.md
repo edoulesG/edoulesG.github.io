@@ -1,18 +1,16 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: Welcome to Martube Home!
 ---
 
-Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
+这套模板来源于[Lagrange](https://github.com/LeNPaul/Lagrange),简洁明亮的风格，我很喜欢。
+在参考了[Getting Started](https://lenpaul.github.io/Lagrange/journal/getting-started.html)后，成功的把这套模板搬上了自己的GitHub Pages。
+再次感谢LeNPaul。
 
-### Getting Started
+ 
+目前博客还在完善中，作者拖延症晚期。
 
-[Getting Started]({{ site.github.url }}{% post_url 2015-10-10-getting-started %}): getting started with installing Lagrange, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
 
-### Example Content
+<!-- Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started. -->
 
-[Text and Formatting]({{ site.github.url }}{% post_url 2014-01-01-text-formatting-examples %})
 
-### Questions?
-
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
