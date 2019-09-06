@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 转载 - 为博客添加 Gitalk 评论插件
+title: "转载 - 为博客添加-Gitalk-评论插件"
 author: BY
+categories: Reprint
 tags: [Reprint]
 image: home-bg-o.jpg
 ---
 
 ### 转载自:[柏荧(BY)的博客](http://qiubaiying.top/2017/12/19/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0-Gitalk-%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/)
-
 
 
 ## 前言
@@ -57,12 +57,12 @@ Gitalk 是一个利用 Github API,基于 Github issue 和 Preact 开发的评论
     var gitalk = new Gitalk({
 
     // gitalk的主要参数
-		clientID: `Github Application clientID`,
-		clientSecret: `Github Application clientSecret`,
-		repo: `存储你评论 issue 的 Github 仓库名`,
-		owner: 'Github 用户名',
-		admin: ['Github 用户名'],
-		id: '页面的唯一标识，gitalk会根据这个标识自动创建的issue的标签',
+        clientID: `Github Application clientID`,
+        clientSecret: `Github Application clientSecret`,
+        repo: `存储你评论 issue 的 Github 仓库名`,
+        owner: 'Github 用户名',
+        admin: ['Github 用户名'],
+        id: '页面的唯一标识，gitalk会根据这个标识自动创建的issue的标签',
     
     });
     gitalk.render('gitalk-container');
