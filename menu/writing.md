@@ -3,8 +3,10 @@ layout: page
 title: Writing
 ---
 <ul class="posts">
+  <!-- based on order by post name -->
+  <!-- for example : 2018-10-10 must after 2016-10-10 -->
   {% for post in site.posts %}
-
+    <!-- control show year -->
     {% unless post.next %}
       <h3>{{ post.date | date: '%Y' }}</h3>
     {% else %}
@@ -12,9 +14,11 @@ title: Writing
       {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
       {% if year != nyear %}
         <h3>{{ post.date | date: '%Y' }}</h3>
+        {% else %}
       {% endif %}
     {% endunless %}
 
+    <!-- control -->
     <li itemscope>
       <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
       <p class="post-date"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>

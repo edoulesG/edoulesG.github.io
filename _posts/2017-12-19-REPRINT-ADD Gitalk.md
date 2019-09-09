@@ -3,7 +3,7 @@ layout: post
 title: "转载 - 为博客添加-Gitalk-评论插件"
 author: BY
 categories: Reprint
-tags: [Reprint]
+tags: [Reprint,documentation]
 image: home-bg-o.jpg
 ---
 
