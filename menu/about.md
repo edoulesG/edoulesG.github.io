@@ -1,16 +1,25 @@
 ---
 layout: page
 title: Welcome to Martube Home!
+multilingual: true 
 ---
 
-这套模板来源于[Lagrange](https://github.com/LeNPaul/Lagrange),简洁明亮的风格，我很喜欢。
-在参考了[Getting Started](https://lenpaul.github.io/Lagrange/journal/getting-started.html)后，成功的把这套模板搬上了自己的GitHub Pages。
-再次感谢LeNPaul。
+<!-- Language Selector -->
+<select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select>
 
- 
-目前博客还在完善中，作者拖延症晚期。
+<!-- Chinese Version -->
+<div class="zh post-container">
+    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
+    {{ about_zh | markdownify }}
+</div>
 
-
-<!-- Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started. -->
+<!-- English Version -->
+<div class="en post-container">
+    {% capture about_en %}{% include about/en.md %}{% endcapture %}
+    {{ about_en | markdownify }}
+</div>
 
 
