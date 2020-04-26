@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }} | {{ site.description }}
+    {% else %}
+      {{ page.title }} | {{ site.title }}
+    {% endif %}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <!-- <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css"> -->
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
+  <!-- Use Atom -->
+  {% feed_meta %}
+  <!-- Use RSS-2.0 -->
+  <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
+  //-->
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">  
+
+    <!-- Custom CSS -->
+    <!-- later import CSS always active first  -->
+  <link rel="stylesheet" href="{{ "/css/martube-blog.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  {% include google-analytics.html %}
+
+  <!-- Use Jekyll SEO plugin -->
+  {% seo %}
+</head>
+
+<body>
+<!-- 内容已经搭好了 接下来就是调整成侧边栏样式 -->
+	<div class="notebook-sidebar">
+		<ul class="posts">
+      <!-- based on order by leetcodenote name -->
+      {% for leetcodenote in site.posts %}
+        <!-- bookclass: type -->
+        {% capture bookclass %}{{ leetcodenote.bookclass }}{% endcapture %}
+        {% if bookclass == 'leetcode' %}
+            <!-- control -->
+            <li itemscope>
+              <a href="{{ site.github.url }}{{ leetcodenote.url }}">{{ leetcodenote.title }}</a>
+            </li>
+            {% else %}
+        {% endif %}
+
+      {% endfor %}
+    </ul>
+	</div>
+
+  <div class="container">
+
+    <div class="post-container">
+      {{ content }}
+    </div>
+
+  </div>
+
+</body>
+<!-- jQuery -->
+<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+</html>

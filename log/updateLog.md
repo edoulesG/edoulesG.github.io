@@ -10,3 +10,8 @@ title: 更新日志
 - 语言选择框增加CSS样式
 
 - 增加bootstrap.css
+
+### 2020/04/26
+
+- 在menu中增加leetcode专区
+- 增加侧边栏（内容有了 样式还没写） 参照[wang的样式](https://leetcode.wang/)
