@@ -1,81 +1,78 @@
 <!doctype html>
 <html>
-<head>
+{% include head.html %}
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
-    {% else %}
-      {{ page.title }} | {{ site.title }}
-    {% endif %}
-  </title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-
-  <!-- <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css"> -->
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
-  <!-- Use Atom -->
-  {% feed_meta %}
-  <!-- Use RSS-2.0 -->
-  <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
-  //-->
-
-  <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">  
-
-    <!-- Custom CSS -->
-    <!-- later import CSS always active first  -->
-  <link rel="stylesheet" href="{{ "/css/martube-blog.css" | prepend: site.baseurl }}">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-
-  <!-- Google Analytics -->
-  {% include google-analytics.html %}
-
-  <!-- Use Jekyll SEO plugin -->
-  {% seo %}
-</head>
-
-<body>
-<!-- 内容已经搭好了 接下来就是调整成侧边栏样式 -->
-	<div class="notebook-sidebar">
-		<ul class="posts">
-      <!-- based on order by leetcodenote name -->
-      {% for leetcodenote in site.posts %}
-        <!-- bookclass: type -->
-        {% capture bookclass %}{{ leetcodenote.bookclass }}{% endcapture %}
-        {% if bookclass == 'leetcode' %}
-            <!-- control -->
-            <li itemscope>
-              <a href="{{ site.github.url }}{{ leetcodenote.url }}">{{ leetcodenote.title }}</a>
-            </li>
-            {% else %}
-        {% endif %}
-
-      {% endfor %}
-    </ul>
-	</div>
-
-  <div class="container">
-
-    <div class="post-container">
-      {{ content }}
+<body style="">
+<div class="page-wrapper toggled">
+  <nav id="sidebar" class="sidebar-wrapper">
+  <div class="sidebar-content mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar desktop">
+    <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+      <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position: relative; left: 0px; top: 0px;" dir="ltr">
+        <a href="#" id="toggle-sidebar"><i class="fa fa-bars"></i></a>
+        <div class="sidebar-brand">
+          <a href="/">Home</a>
+        </div>
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Search for...">
+              <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-menu">
+          <ul>
+            <li><a href="/menu/leetcode.html"><span>introduction...</span></a></li>
+            <!-- based on order by leetcodenote name -->
+            <!-- todo sort -->
+            {% for leetcodenote in site.posts %}
+              <!-- bookclass: type -->
+              {% capture bookclass %}{{ leetcodenote.bookclass }}{% endcapture %}
+              {% if bookclass == 'leetcode' %}
+                  <!-- control -->
+                  <li>
+                    <a href="{{ site.github.url }}{{ leetcodenote.url }}">{{ leetcodenote.title }}</a>
+                  </li>
+                  {% else %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+        <div class="mCSB_draggerContainer">
+          <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;">
+            <div class="mCSB_dragger_bar" style="line-height: 30px;">
+            </div>
+          </div>
+          <div class="mCSB_draggerRail">
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
-
+<!--   <div class="sidebar-footer">
+    <a href="#"><i class="fa fa-gear"></i></a>
+    <a href="#"><i class="fa fa-power-off"></i></a>
+  </div> -->
+  </nav>
+  <main class="page-content">
+  <div class="container-fluid">
+    <header class="header">
+    <h1>{{ page.title }}</h1>
+    </header>
+    {{ content }}
+  </div>
+  </main>
+</div>
 </body>
-<!-- jQuery -->
-<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
+
+<!-- jQuery -->
+<script src="{{ "/m_assets/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/m_assets/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<!-- for notebook -->
+<script src="{{ "/m_assets/notebook/js/jquery.mCustomScrollbar.concat.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/m_assets/notebook/js/custom.js " | prepend: site.baseurl }}"></script>
 </html>

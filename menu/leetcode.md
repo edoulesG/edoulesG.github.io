@@ -1,6 +1,6 @@
 ---
 layout: notebook
-title: LeetCodeNote
+title: INTRODUCTION
 ---
 
 介绍！！！！！
