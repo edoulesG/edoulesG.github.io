@@ -12,7 +12,6 @@ body, html { font-size: 100%;   padding: 0; margin: 0;}
     box-sizing: border-box;
 }
 
-
 body {
     background: #ffffff;
     color: #474242;
@@ -34,15 +33,16 @@ body {
 
 
 /* Header */
-.header{
-    padding: 0em 190px 1em;
+.header {
+    padding: 0% 10% 5%;
     letter-spacing: -1px;
     text-align: center;
 }
+
 .header h1 {
     color: #D5D6E2;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 25px;
     line-height: 1;
     margin-bottom: 0;
     margin-top: 0px;
@@ -75,11 +75,18 @@ body {
 .page-wrapper.toggled .sidebar-wrapper{
     left:0px;
 }
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
+    .page-wrapper.toggled .page-content{
+        padding-left: 300px;
+    }
+}*/
+
+@media screen and (min-width: 400px) {
     .page-wrapper.toggled .page-content{
         padding-left: 300px;
     }
 }
+
 
 .page-wrapper.toggled #toggle-sidebar{
     position: absolute;
@@ -352,7 +359,7 @@ body {
     padding-left: 0px;
 }
 .page-wrapper .page-content > div {
-    padding: 20px 140px;
+    padding: 5% 15%;
 }
 .page-wrapper .page-content {
     overflow-x: hidden;

@@ -14,4 +14,10 @@ title: 更新日志
 ### 2020/04/26
 
 - 在menu中增加leetcode专区
-- 增加侧边栏（内容有了 样式还没写） 参照[wang的样式](https://leetcode.wang/)
+- 增加侧边栏 
+
+### 2020/04/30
+
+- 调整在手机端的leetcode专区显示效果
+
+- TODO 看板娘??? [二次元live2d看板娘效果中的web前端技术](http://www.gzui.net/archives/2511)
