@@ -81,7 +81,7 @@ body {
     }
 }*/
 
-@media screen and (min-width: 100px) {
+@media screen and (min-width: 10px) {
     .page-wrapper.toggled .page-content{
         padding-left: 300px;
     }
