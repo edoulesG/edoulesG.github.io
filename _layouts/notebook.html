@@ -24,8 +24,9 @@
           <ul>
             <li><a href="/menu/leetcode.html"><span>introduction...</span></a></li>
             <!-- based on order by leetcodenote name -->
-            <!-- todo sort -->
-            {% for leetcodenote in site.posts %}
+            <!-- sort by title -->
+            {% assign pages = site.posts | sort:"title" %}
+            {% for leetcodenote in pages %}
               <!-- bookclass: type -->
               {% capture bookclass %}{{ leetcodenote.bookclass }}{% endcapture %}
               {% if bookclass == 'leetcode' %}
