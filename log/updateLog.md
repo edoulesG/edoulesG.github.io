@@ -21,3 +21,7 @@ title: 更新日志
 - 调整在手机端的leetcode专区显示效果
 
 - TODO 看板娘??? [二次元live2d看板娘效果中的web前端技术](http://www.gzui.net/archives/2511)
+
+### 2020/06/02
+
+- 对leetcode区侧边栏文章list按名称排序

@@ -6,8 +6,8 @@ title: Writing
   <!-- based on order by post name -->
   <!-- for example : 2018-10-10 must after 2016-10-10 -->
   <!-- sort -->
-  {% assign pages = site.posts | sort:"title" %}
-  {% for post in pages %}
+  <!-- {% assign pages = site.posts | sort:"title" %} -->
+  {% for post in site.posts %}
     <!-- control show year -->
     {% capture bookclass %}{{ post.bookclass }}{% endcapture %}
     {% if bookclass != 'leetcode' %}
